@@ -1,0 +1,338 @@
+/* ==========================================================================
+   DRONE & ROBOTICS CONFIGURATOR (STUDIO LAB)
+   ========================================================================== */
+.configurator-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, rgba(20, 24, 34, 0.5) 0%, transparent 100%);
+}
+
+.configurator-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.config-steps-nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.config-step-btn {
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--trans-fast);
+}
+
+.config-step-btn:hover {
+  border-color: var(--border-medium);
+  color: #ffffff;
+}
+
+.config-step-btn.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--text-dark);
+}
+
+.config-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.config-option-card {
+  padding: 16px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--trans-fast);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.config-option-card:hover {
+  border-color: var(--border-medium);
+  background: var(--bg-card-hover);
+}
+
+.config-option-card.selected {
+  border-color: var(--accent-primary);
+  background: var(--bg-surface-elevated);
+  box-shadow: 0 0 0 1px var(--accent-primary);
+}
+
+.config-opt-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.config-opt-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.config-opt-price {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* Studio Preview & Specs Sidebar */
+.config-live-hud {
+  position: sticky;
+  top: 90px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hud-blueprint-display {
+  width: 100%;
+  height: 200px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hud-stat-meter-row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.meter-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.meter-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.meter-fill {
+  height: 100%;
+  background: #38bdf8;
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.meter-fill.warning {
+  background: #f59e0b;
+}
+
+.meter-fill.purple {
+  background: #818cf8;
+}
+
+.config-summary-box {
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.config-total-val {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   COMPARISON MATRIX STYLES
+   ========================================================================== */
+.compare-modal-content {
+  padding: 28px;
+}
+
+.compare-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+
+.compare-matrix-table th, .compare-matrix-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.compare-matrix-table th:first-child, .compare-matrix-table td:first-child {
+  text-align: left;
+  color: var(--text-muted);
+  width: 200px;
+}
+
+.compare-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 6px;
+}
+
+.compare-item-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ==========================================================================
+   CHECKOUT MODAL
+   ========================================================================== */
+.checkout-steps-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.checkout-step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.step-num-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.checkout-step-indicator.active .step-num-circle {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--text-dark);
+}
+
+.checkout-step-indicator.done .step-num-circle {
+  border-color: var(--accent-emerald);
+  background: var(--accent-emerald);
+  color: #ffffff;
+}
+
+.step-title-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.checkout-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-field-lbl {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.form-field-input {
+  height: 40px;
+  padding: 0 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all var(--trans-fast);
+}
+
+.form-field-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.payment-method-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-method-card {
+  padding: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all var(--trans-fast);
+}
+
+.payment-method-card:hover, .payment-method-card.selected {
+  border-color: var(--accent-primary);
+  background: var(--bg-surface-elevated);
+}
+
+@media (max-width: 960px) {
+  .configurator-layout { grid-template-columns: 1fr; }
+}
